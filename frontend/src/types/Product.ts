@@ -7,7 +7,8 @@ export type Product = {
     brand: string
     price: number
     discount?: number 
-    discount_period?: Date
+    discount_start?: Date
+    discount_end?: Date
     countInStock: number
     description: string
     rating: number
