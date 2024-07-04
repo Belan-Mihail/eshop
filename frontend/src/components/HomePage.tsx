@@ -7,7 +7,7 @@ const HomePage = () => {
   const [gridNumber, setGridNumber] = useState(1)
 
 const  gridChanger = () => (
-    gridNumber === 1 ? (setGridNumber(2)) : (setGridNumber(1))
+    gridNumber === 1 ? (setGridNumber(2)) : gridNumber === 2 ? (setGridNumber(3)) : gridNumber === 3 ? (setGridNumber(4)) : (setGridNumber(1))
   )
   
 
