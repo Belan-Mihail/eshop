@@ -6,18 +6,22 @@ const HomePage = () => {
   const selectedProductsForHomePage: Product[] = [];
   const [gridNumber, setGridNumber] = useState(1);
 
-  function randomInteger(min: number, max: number) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+  // function randomInteger(min: number, max: number) {
+  //   return Math.floor(Math.random() * (max - min + 1)) + min;
+  // }
 
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setGridNumber((prevGridNumber) => randomInteger(1, 4));
-    }, 3000);
-    return () => {
-      window.clearInterval(timer);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const timer = window.setInterval(() => {
+  //     setGridNumber((prevGridNumber) => randomInteger(1, 4));
+  //   }, 3000);
+  //   return () => {
+  //     window.clearInterval(timer);
+  //   };
+  // }, []);
+
+  const changeSlide = () => {
+    gridNumber === 1 ? setGridNumber(2) : gridNumber === 2 ? setGridNumber(3) : gridNumber === 3 ? setGridNumber(4) : setGridNumber(1)
+  }
 
   sampleProducts.map((arrayProduct) =>
     selectedProductsForHomePage.push(
@@ -42,6 +46,10 @@ const HomePage = () => {
       <h2 className="text-3xl font-bold underline text-center my-8">
         Products
       </h2>
+      <div className="my-10 items-center text-center">
+        <button className="text-white text-center bg-orange-500 p-4 rounded-3xl hover:bg-orange-600 " onClick={changeSlide}>Change slide</button>
+
+      </div>
 
       {gridNumber === 1 && (
         <div className="grid grid-cols-3 grid-rows-4 gap-3 h-screen mx-8">
