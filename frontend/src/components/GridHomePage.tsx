@@ -1,4 +1,5 @@
 import { Product } from '../types/Product';
+import { motion } from "framer-motion"
 
 
 export type Props = {
@@ -13,14 +14,15 @@ const GridHomePage = ({selectedProductsForHomePage, gridNumber}: Props) => {
   return (
     <>
         {gridNumber === 1 && (
-        <div className="grid grid-cols-3 grid-rows-4 gap-3 h-screen mx-8">
-          <div className="col-span-2  overflow-hidden">
+        <motion.div className="grid grid-cols-3 grid-rows-4 gap-3 h-screen mx-8" initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }} transition={{duration: 0.5}}>
+          <motion.div className="col-span-2  overflow-hidden">
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
               src={product1.image}
               alt={product1.name}
             />
-          </div>
+          </motion.div>
           <div className="row-span-2 col-start-2 row-start-2 overflow-hidden">
             {" "}
             <img
@@ -60,11 +62,12 @@ const GridHomePage = ({selectedProductsForHomePage, gridNumber}: Props) => {
               alt={product6.name}
             />
           </div>
-        </div>
+        </motion.div>
       )}
 
       {gridNumber === 2 && (
-        <div className="grid grid-cols-3 grid-rows-4 gap-4 h-screen mx-8">
+        <motion.div className="grid grid-cols-3 grid-rows-4 gap-4 h-screen mx-8" initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }} transition={{duration: 0.5}}>
           <div className="col-start-2 row-start-1">
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
@@ -107,11 +110,12 @@ const GridHomePage = ({selectedProductsForHomePage, gridNumber}: Props) => {
               alt={product1.name}
             />
           </div>
-        </div>
+        </motion.div>
       )}
 
       {gridNumber === 3 && (
-        <div className="grid grid-cols-3 grid-rows-4 gap-4 h-screen mx-8">
+        <motion.div className="grid grid-cols-3 grid-rows-4 gap-4 h-screen mx-8" initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }} transition={{duration: 0.5}}>
           <div className="col-start-3 row-start-1">
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
@@ -154,11 +158,12 @@ const GridHomePage = ({selectedProductsForHomePage, gridNumber}: Props) => {
               alt={product2.name}
             />
           </div>
-        </div>
+        </motion.div>
       )}
 
       {gridNumber === 4 && (
-        <div className="grid grid-cols-3 grid-rows-4 gap-4 h-screen mx-8">
+        <motion.div className="grid grid-cols-3 grid-rows-4 gap-4 h-screen mx-8" initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }} transition={{duration: 0.5}}>
           <div className="row-span-2 col-start-3 row-start-1">
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
@@ -201,7 +206,7 @@ const GridHomePage = ({selectedProductsForHomePage, gridNumber}: Props) => {
               alt={product6.name}
             />
           </div>
-        </div>
+        </motion.div>
       )}
     </>
   )
