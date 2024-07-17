@@ -27,12 +27,17 @@ const HomePage = () => {
     gridNumber === 6 && setTimeout(() => {
       setGridNumber(3)
     }, 2000);
+    gridNumber === 7 && setTimeout(() => {
+      setGridNumber(4)
+    }, 2000);
+    gridNumber === 8 && setTimeout(() => {
+      setGridNumber(1)
+    }, 2000);
   }, [gridNumber])
 
   const nextSlide = () => {
-      // gridNumber === 1 ? setGridNumber(5) : gridNumber === 2 ? setGridNumber(6) : gridNumber === 3 ? setGridNumber(4) : setGridNumber(1)
-      gridNumber === 1 && setGridNumber(5) 
-      gridNumber === 2 && setGridNumber(6) 
+      gridNumber === 1 ? setGridNumber(5) : gridNumber === 2 ? setGridNumber(6) : gridNumber === 3 ? setGridNumber(7) : setGridNumber(8)
+
   }
 
   const prevSlide = () => {
