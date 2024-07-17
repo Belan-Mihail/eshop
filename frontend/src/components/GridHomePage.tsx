@@ -199,7 +199,7 @@ const GridHomePage = ({ selectedProductsForHomePage, gridNumber }: Props) => {
             initial={{ opacity: 0, x: '100px' }}
             animate={{ opacity: 1, x: '0' }}
             transition={{ duration: 2 }}
-            exit={{ opacity: 0, x: '100px' }}>
+            exit={{ opacity: 0, y: '-100px' }}>
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
               src={product5.image}
@@ -210,7 +210,7 @@ const GridHomePage = ({ selectedProductsForHomePage, gridNumber }: Props) => {
               initial={{ opacity: 0, x: '-100px' }}
               animate={{ opacity: 1, x: '0' }}
               transition={{ duration: 2 }}
-              exit={{ opacity: 0, x: '100px' }}>
+              exit={{ opacity: 0, y: '100px' }}>
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
               src={product6.image}
@@ -232,7 +232,7 @@ const GridHomePage = ({ selectedProductsForHomePage, gridNumber }: Props) => {
           initial={{ opacity: 0, x: '-100px' }}
           animate={{ opacity: 1, x: '0' }}
           transition={{ duration: 2 }}
-          exit={{ opacity: 0, x: '100px' }}>
+          exit={{ opacity: 0, y: '-100px' }}>
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
               src={product3.image}
@@ -254,7 +254,7 @@ const GridHomePage = ({ selectedProductsForHomePage, gridNumber }: Props) => {
           initial={{ opacity: 0, x: '-100px' }}
           animate={{ opacity: 1, x: '0' }}
           transition={{ duration: 2 }}
-          exit={{ opacity: 0, x: '100px' }}>
+          exit={{ opacity: 0, y: '100px' }}>
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
               src={product2.image}
@@ -274,48 +274,78 @@ const GridHomePage = ({ selectedProductsForHomePage, gridNumber }: Props) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 2.5 }}
         >
-          <div className="row-span-2 col-start-3 row-start-1">
+          <motion.div className="row-span-2 col-start-3 row-start-1"
+          initial={{ opacity: 0, x: '100px', y:'-100px' }}
+          animate={{ opacity: 1, x: '0', y:'0'  }}
+          transition={{ duration: 2 }}
+          exit={{ opacity: 0, x: '100px', y: '-100px' }}
+          >
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
               src={product3.image}
               alt={product3.name}
             />
-          </div>
-          <div className="row-span-2 col-start-2 row-start-3">
+          </motion.div>
+          <motion.div className="row-span-2 col-start-2 row-start-3"
+          initial={{ opacity: 0, y: '100px' }}
+          animate={{ opacity: 1, y: '0'  }}
+          transition={{ duration: 2 }}
+          exit={{ opacity: 0, y: '100px' }}
+          >
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
               src={product2.image}
               alt={product2.name}
             />
-          </div>
-          <div className="row-span-2 col-start-2 row-start-1">
+          </motion.div>
+          <motion.div className="row-span-2 col-start-2 row-start-1"
+          initial={{ opacity: 0, y: '-100px' }}
+          animate={{ opacity: 1, y: '0'  }}
+          transition={{ duration: 2 }}
+          exit={{ opacity: 0, y: '-100px' }}
+          >
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
               src={product5.image}
               alt={product5.name}
             />
-          </div>
-          <div className="row-span-2 col-start-1 row-start-1">
+          </motion.div>
+          <motion.div className="row-span-2 col-start-1 row-start-1"
+          initial={{ opacity: 0, x: '-100px', y:'-100px' }}
+          animate={{ opacity: 1, x: '0', y:'0'  }}
+          transition={{ duration: 2 }}
+          exit={{ opacity: 0, x: '-100px', y: '-100px' }}
+          >
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
               src={product4.image}
               alt={product4.name}
             />
-          </div>
-          <div className="row-span-2 col-start-3 row-start-3">
+          </motion.div>
+          <motion.div className="row-span-2 col-start-3 row-start-3"
+          initial={{ opacity: 0, x: '100px', y: '100px' }}
+          animate={{ opacity: 1, x: '0', y: '0'  }}
+          transition={{ duration: 2 }}
+          exit={{ opacity: 0, x: '100px', y: '100px' }}
+          >
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
               src={product1.image}
               alt={product1.name}
             />
-          </div>
-          <div className="row-span-2 col-start-1 row-start-3">
+          </motion.div>
+          <motion.div className="row-span-2 col-start-1 row-start-3"
+          initial={{ opacity: 0, x: '-100px', y: '100px' }}
+          animate={{ opacity: 1, x: '0', y: '0'  }}
+          transition={{ duration: 2 }}
+          exit={{ opacity: 0, x: '-100px', y: '100px' }}
+          >
             <img
               className="object-cover max-w-[100%] h-[100%] w-[100%]"
               src={product6.image}
               alt={product6.name}
             />
-          </div>
+          </motion.div>
         </motion.div>
       )}
       </AnimatePresence>

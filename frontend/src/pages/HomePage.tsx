@@ -76,10 +76,7 @@ const HomePage = () => {
         <GridHomePage selectedProductsForHomePage={selectedProductsForHomePage} gridNumber={gridNumber} />
       </div>
       
-      <div className="my-10 items-center text-center">
-        <button className="text-white text-center bg-orange-500 p-4 rounded-3xl hover:bg-orange-600 " onClick={prevSlide}>Change slide</button>
 
-      </div>
     </>
   );
 };
