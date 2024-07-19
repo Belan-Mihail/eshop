@@ -63,7 +63,7 @@ const HomePage = () => {
       </h2>
 
 
-      <div className="w-full p-16 overflow-hidden">
+      <div className="w-full p-16 overflow-hidden ">
         <GridHomePage selectedProductsForHomePage={selectedProductsForHomePage} gridNumber={gridNumber} />
       </div>
       

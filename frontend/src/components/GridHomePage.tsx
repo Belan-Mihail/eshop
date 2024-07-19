@@ -25,7 +25,7 @@ const GridHomePage = ({ selectedProductsForHomePage, gridNumber }: Props) => {
           
             
             <motion.div
-              className="col-span-2  overflow-hidden"
+              className="col-span-2  overflow-hidden "
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, y: '-100px' }}
